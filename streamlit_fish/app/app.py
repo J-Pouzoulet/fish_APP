@@ -30,6 +30,7 @@ with col2:
     #st.write('Values:', Height)
 
 if st.button('Predict Fish Weight'):
+    #call fast_api when opened in local uvicorn server 
     res = rq.get(f'http://127.0.0.1:8000/?Species={option}&Height={Height}').json()
     Weight = int(float(res['Weight']))
     st.write(f'Your {option} likely weight {Weight} g')
