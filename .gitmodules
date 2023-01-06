@@ -1,0 +1,3 @@
+[submodule "streamlit_fish"]
+	path = streamlit_fish
+	url = /streamlit_fish
