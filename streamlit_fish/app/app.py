@@ -32,7 +32,7 @@ with col2:
 if st.button('Predict Fish Weight'):
     #call fast_api when opened in local uvicorn server 
     #res = rq.get(f'http://127.0.0.1:8000/?Species={option}&Height={Height}').json()
-    res = rq.get(f'c21a-91-164-251-67.eu.ngrok.io/?Species={option}&Height={Height}').json() #request through NGROK
+    res = rq.get(f'https://c21a-91-164-251-67.eu.ngrok.io/?Species={option}&Height={Height}').json() #request through NGROK
     Weight = int(float(res['Weight']))
     st.write(f'Your {option} likely weight {Weight} g')
 else:
